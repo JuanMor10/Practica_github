@@ -16,7 +16,6 @@ public class Persona {
     int edad;
 
     public Persona(String numeroDeTelefono, String nombre, int edad) {
-        super();
         this.numeroDeTelefono = numeroDeTelefono;
         this.nombre = nombre;
         this.edad = edad;
@@ -40,4 +39,12 @@ public class Persona {
         this.numeroDeTelefono = numeroDeTelefono;
     }
 
+    @Override
+    public String toString() {
+        return "Persona{" +
+                "numeroDeTelefono='" + numeroDeTelefono + '\'' +
+                ", nombre='" + nombre + '\'' +
+                ", edad=" + edad +
+                '}';
+    }
 }

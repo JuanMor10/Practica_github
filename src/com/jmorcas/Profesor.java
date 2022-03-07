@@ -7,27 +7,34 @@ import java.util.List;
  * @version: 07/03/2022
  */
 public class Profesor extends Persona{
-    String str;
-    int edad;
+    /**
+     * Atributos
+     */
     List<Prestamo> prestamos;
 
-    public Profesor(String numeroDeTelefono, String numeroDeTelefono1) {
-        super(numeroDeTelefono);
+    /**
+     * Constructor de la clase profesor
+     * @param numeroDeTelefono numero de telefono
+     * @param nombre nombre del profesor
+     * @param edad edad del profesor
+     * @param prestamos prestamos que tiene el profesor
+     */
+    public Profesor(String numeroDeTelefono, String nombre, int edad, List<Prestamo> prestamos) {
+        super(numeroDeTelefono, nombre, edad);
+        this.prestamos = prestamos;
     }
 
-    public void printInformacionPersonal(){
-        System.out.println("Nombre: " + str);
-        System.out.println("Edad: " + edad);
-        System.out.println("Teléfono: " + numeroDeTelefono);
+    /**
+     * Metodo toString
+     * @return Datos de profesor
+     */
+    @Override
+    public String toString() {
+        return "Profesor{" +
+                "numeroDeTelefono='" + numeroDeTelefono + '\'' +
+                ", nombre='" + nombre + '\'' +
+                ", edad=" + edad +
+                ", prestamos=" + prestamos +
+                '}';
     }
-
-    public void printTodaLaInformacion(){
-        System.out.println("Nombre: " + str);
-        System.out.println("Edad: " + edad);
-        System.out.println("Teléfono: " + numeroDeTelefono);
-        for (Prestamo p: prestamos) {
-            System.out.println(p);
-        }
-    }
-
 }
